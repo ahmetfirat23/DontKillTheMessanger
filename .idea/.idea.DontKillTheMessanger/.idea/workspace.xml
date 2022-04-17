@@ -2,45 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aab4baf9-248f-4229-af35-903688a6d98d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DontKillTheMessanger/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.DontKillTheMessanger/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/1.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/2.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/3.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/4.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/5.jpg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/Dialogue.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/Dialogue.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueBoxData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueBoxData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/DialogueData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/DialogueData.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/Emotions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/Emotions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/Line.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/Line.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/Response.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueData/Response.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/DialogueTrigger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/Dialogues.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/Dialogues/Dialogue1.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/Dialogues/Dialogue1.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/TestScript.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/TestScript.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/PlayerInputHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/PlayerInputHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerInputs.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerController.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/PlayerController.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/playerData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/playerData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/WhatsApp Image 2022-04-16 at 21.58.57.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Sprites/WhatsApp Image 2022-04-16 at 21.58.57.jpeg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DontKillTheMessanger/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DontKillTheMessanger/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/TestScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/Dialogue System/TestScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/PlayerInputHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CommonScripts/PlayerInputHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +20,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="27siIsakjegaHQt5hvokyscgHBr" />
   <component name="ProjectLevelVcsManager">
@@ -99,6 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650115118291</updated>
       <workItem from="1650115128563" duration="7517000" />
+      <workItem from="1650186205000" duration="1266000" />
     </task>
     <servers />
   </component>

@@ -44,7 +44,6 @@ public class PlayerInputHandler : MonoBehaviour
         if (Mathf.Abs(RawMovementInput.x) > 0.5f)
         {
             NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
-            transform.position += new Vector3(NormInputX, 0, 0) * Time.deltaTime * 30;
         }
         else
         {
