@@ -194,7 +194,6 @@ IEnumerator TypeSentence(Sprite[] sentence)
             GameObject imageHolder = dialogue.buttons[i].transform.GetChild(0).gameObject;
             foreach(Image image in imageHolder.GetComponentsInChildren<Image>())
             {
-                Debug.Log(dialogue.buttons[i].GetComponentsInChildren<Image>().Length);
                 image.sprite = line.responses[i].sprites[spriteIndex];
                 spriteIndex++;
             }

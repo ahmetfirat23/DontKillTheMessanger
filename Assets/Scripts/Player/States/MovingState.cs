@@ -10,23 +10,12 @@ public class MovingState : PlayerState
     public MovingState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
-    
-    public override void DoChecks()
-    {
-        base.DoChecks();
-    }
-    
     public override void Enter()
     {
         base.Enter();
         Debug.Log("Enter Moving State");    
     }
-    
-    public override void Exit()
-    {
-        base.Exit();
-    }
-    
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
@@ -34,31 +23,45 @@ public class MovingState : PlayerState
         xInput = player.InputHandler.NormInputX;
         player.CheckIfShouldFlip(xInput);
         player.SetVelocityX(playerData.movementSpeed * xInput);
-
-        if (!isExitingState && player.triggerEntered &&((!player.dialogueManager.started && !player.dialogueManager.finished) ||
-                                                        (!player.dialogueManager.started && player.dialogueManager.finished)))
+        if (!isExitingState)
         {
-            player.InputHandler.customInteractionEvent = TriggerDialogue;
-        }
+            if (player.InputHandler.PauseInput)
+            {
+                player.StateMachine.ChangeState(player.MenuState);
+            }
 
-        
-        if (!isExitingState && xInput == 0)
-        {
-            stateMachine.ChangeState(player.IdleState);
+            if (player.triggerEntered && player.dialogueManager!=null &&
+                ((!player.dialogueManager.started && !player.dialogueManager.finished) ||
+                 (!player.dialogueManager.started && player.dialogueManager.finished)))
+            {
+                player.InputHandler.customInteractionEvent = TriggerDialogue;
+            }
+            
+            if (player.InputHandler.CodexInput)
+            {
+                stateMachine.ChangeState(player.DecryptingState);
+            }
+
+            else if (xInput == 0)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
         }
     }
-    
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
-    }
-    
+
     private void TriggerDialogue(InputAction.CallbackContext context)
     {
         if (context.started)
         {
-            stateMachine.ChangeState(player.TalkingState);
-            player.tempObj.GetComponent<DialogueTrigger>().TriggerDialogue();
+            if (player.dialogueManager != null)
+            {
+                stateMachine.ChangeState(player.TalkingState);
+                player.tempObj.GetComponent<DialogueTrigger>().TriggerDialogue();
+            }
+            else
+            {
+                stateMachine.ChangeState(player.DecryptingState);
+            }
         }
     }
     

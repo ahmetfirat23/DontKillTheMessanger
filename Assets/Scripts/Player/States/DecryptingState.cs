@@ -22,12 +22,17 @@ public class DecryptingState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        
+        player.SetVelocityZero();
+        player.Codex.GetComponent<Animator>().Play("CodexOpen");
 
     }
         
     public override void Exit()
     {
         base.Exit();
+        player.Codex.GetComponent<Animator>().Play("CodexClose");
+        Debug.Log("Exiting decrypting state");
     }
         
     public override void LogicUpdate()
@@ -35,27 +40,40 @@ public class DecryptingState : PlayerState
         base.LogicUpdate();
         xInput = player.InputHandler.NormInputX;
         yInput = player.InputHandler.NormInputY;
-        if (yInput != 0 && !isRotating)
+        if (!isExitingState)
         {
-            isRotating = true;
-            player.StartCoroutine(Rotate(yInput));
+            if (player.InputHandler.PauseInput)
+            {
+                player.StateMachine.ChangeState(player.MenuState);
+            }
+            
+            if (yInput != 0 && !isRotating)
+            {
+                isRotating = true;
+                player.StartCoroutine(Rotate(yInput));
+            }
+            else if (!isRotating && xInput > 0 && rowIndex == 0)
+            {
+                rowIndex = 1;
+                player.Slot.firstRowSR.sprite = player.Slot.firstRowSprite1;
+                player.Slot.secondRowSR.sprite = player.Slot.secondRowSprite2;
+            }
+            else if (!isRotating && xInput < 0 && rowIndex == 1)
+            {
+                rowIndex = 0;
+                player.Slot.firstRowSR.sprite = player.Slot.firstRowSprite2;
+                player.Slot.secondRowSR.sprite = player.Slot.secondRowSprite1;
+            }
+
+            else if (!player.InputHandler.CodexInput)
+            {
+                stateMachine.ChangeState(player.IdleState);
+                if (player.CheckingManager.activeInHierarchy)
+                {
+                    player.CheckingManager.SetActive(false);
+                }
+            }
         }
-        else if (!isRotating && xInput > 0 && rowIndex == 0)
-        {
-            rowIndex = 1;
-            //TODO graphical implementation
-        }
-        else if(!isRotating && xInput < 0 && rowIndex == 1)
-        {
-            rowIndex = 0;
-            //TODO graphical implementation
-        }
-        
-    }
-    
-    public override void PhysicsUpdate()
-    {
-        base.PhysicsUpdate();
     }
 
     private IEnumerator Rotate(int yInput)

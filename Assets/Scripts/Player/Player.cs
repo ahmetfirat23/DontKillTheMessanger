@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     
     [SerializeField] 
     private PlayerData playerData;
+
+    public GameObject PauseMenu;
+    public GameObject Codex;
+    public GameObject CheckingManager;
     
     public Animator Anim{get; private set;}
     public PlayerInputHandler InputHandler{get; private set;}
@@ -44,7 +48,7 @@ public class Player : MonoBehaviour
         MovingState = new MovingState(this, StateMachine, playerData, "moving");
         TalkingState = new TalkingState(this, StateMachine, playerData, "talking");
         DecryptingState = new DecryptingState(this, StateMachine, playerData, "decrypting");
-        /*MenuState = new MenuState(this, StateMachine, playerData, "menu");*/
+        MenuState = new MenuState(this, StateMachine, playerData, "menu");
         
     }
 
@@ -58,7 +62,7 @@ public class Player : MonoBehaviour
 
         FacingDirection = CheckStartingDirection();
         
-        StateMachine.Initialize(DecryptingState);
+        StateMachine.Initialize(IdleState);
     }
 
     private void Update()
@@ -111,7 +115,11 @@ public class Player : MonoBehaviour
     {
         triggerEntered = true;
         tempObj = collider.gameObject;
-        dialogueManager = tempObj.GetComponent<DialogueManager>();
+        if (collider.gameObject.CompareTag("NPC"))
+        {
+            dialogueManager = tempObj.GetComponent<DialogueManager>();
+        }
+
         tempFunction = InputHandler.customInteractionEvent;
         
     }

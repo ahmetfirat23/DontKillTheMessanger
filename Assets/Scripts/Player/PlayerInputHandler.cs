@@ -14,6 +14,8 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 RawMovementInput { get; private set; }
     public int NormInputX { get; private set; }
     public int NormInputY { get; private set; }
+    public bool CodexInput { get; private set; }
+    public bool PauseInput { get; private set; }
 
 
     private void Start()
@@ -22,19 +24,6 @@ public class PlayerInputHandler : MonoBehaviour
         cam = Camera.main;
         customInteractionEvent = DummyFunction;
 
-    }
-
-    private void DummyFunction(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            Debug.Log("bye champ");
-        }
-    }
-
-    public void OnInteractionInput(InputAction.CallbackContext context)
-    {
-        customInteractionEvent(context);
     }
 
     public void OnMoveInput(InputAction.CallbackContext context)
@@ -59,8 +48,41 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
     
-    public void OnEscapeInput()
+    public void OnInteractionInput(InputAction.CallbackContext context)
     {
-        Application.Quit();
+        customInteractionEvent(context);
+    }
+    
+    public void OnOpenCodexInput(InputAction.CallbackContext context)
+    {
+        CodexInput = CodexInput ? false : true;
+    }
+    
+    public void OnOpenCodexInput()
+    {
+        CodexInput = CodexInput ? false : true;
+    }
+
+    public void CloseCodexInput()
+    {
+        CodexInput = false;
+    }
+    
+    public void OnPauseInput(InputAction.CallbackContext context)
+    {
+        PauseInput = PauseInput ? false : true;
+    }
+
+    public void OnContinueInput()
+    {
+        PauseInput = false;
+    }
+
+    private void DummyFunction(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            Debug.Log("bye champ");
+        }
     }
 }

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  rotateInterval: 0.025
+  rotateInterval: 0.001

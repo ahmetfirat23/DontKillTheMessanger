@@ -26,17 +26,27 @@ public class TalkingState : PlayerState
     public override void Exit()
     {
         base.Exit();
+
+        player.InputHandler.CloseCodexInput();
     }
         
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-            
-        if(player.dialogueManager.finished)
+
+        if (!isExitingState)
         {
-            stateMachine.ChangeState(player.IdleState);
+            if (player.InputHandler.PauseInput)
+            {
+                player.StateMachine.ChangeState(player.MenuState);
+            }
+
+            if (player.dialogueManager.finished)
+            {
+                stateMachine.ChangeState(player.IdleState);
+            }
         }
-            
+
     }
         
     public override void PhysicsUpdate()

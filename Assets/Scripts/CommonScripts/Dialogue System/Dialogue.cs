@@ -39,6 +39,8 @@ public class Dialogue
     {
         foreach(DialogueBoxData data in dialogueBoxDatas)
         {
+            Debug.Log(data.name);
+            Debug.Log(name);
             if(data.name.ToLower() == name.ToLower())
             {
                 return data;

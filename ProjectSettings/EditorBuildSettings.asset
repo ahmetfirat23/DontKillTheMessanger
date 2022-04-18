@@ -6,7 +6,22 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: f64a03b248a34eb458f19f8d326ba929
+  - enabled: 1
+    path: Assets/Scenes/Level0.unity
+    guid: 3490c661ffb9b3a4584f3b5a5ee3b35c
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 7b03874bf07deb048b8975442ae04c82
+  - enabled: 1
+    path: Assets/Scenes/ShootingMinigame.unity
+    guid: 283ad39cacb0e1f4b84faba0430ca04c
+  - enabled: 1
+    path: Assets/Scenes/Memory_Minigame.unity
+    guid: d85156ba98a38e04d924498a85ce5158
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 27e34aed7d9d67d4eb7e720b921faa18, type: 2}
